@@ -111,9 +111,29 @@ ul {
 }
 
 @media (max-width: 780px) {
-  header ul {
-    display: none;
+  nav {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(20, 20, 63);
+    transition: all 1s ease;
   }
+
+  nav.active {
+    top: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 30px;
+  }
+  .hamburger-menu {
+    z-index: 100;
+  }
+
   .hero {
     flex-direction: column;
     gap: 50px;
@@ -135,16 +155,16 @@ ul {
 }
 
 @media (max-width: 480px) {
-  body{
+  body {
     background-image: none;
-    background-color: #1B1F24;
+    background-color: #1b1f24;
   }
 
-    .hero-intro h1 {
+  .hero-intro h1 {
     font-size: 30px;
   }
 
-  .bg-img{
+  .bg-img {
     display: flex;
     width: 80%;
   }
